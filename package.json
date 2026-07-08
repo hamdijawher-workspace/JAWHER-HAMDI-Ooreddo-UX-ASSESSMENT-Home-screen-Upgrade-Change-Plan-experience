@@ -1,0 +1,21 @@
+{
+  "name": "jawher-hamdi-ooredoo-ux-assessment-prototype",
+  "version": "1.0.0",
+  "description": "Interactive web prototype for the Ooredoo Home and Upgrade / Change Plan UX assessment.",
+  "private": true,
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node -e \"console.log('Static project: no build step required.')\"",
+    "check": "node --check server.mjs && node --check src/main.js"
+  },
+  "keywords": [
+    "ux-assessment",
+    "prototype",
+    "ooredoo",
+    "mobile-web"
+  ],
+  "author": "Jawher Hamdi",
+  "license": "UNLICENSED",
+  "devDependencies": {}
+}

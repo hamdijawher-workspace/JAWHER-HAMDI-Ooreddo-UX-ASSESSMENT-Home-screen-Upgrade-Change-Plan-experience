@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ooredoo MVP Prototype</title>
+    <meta
+      name="description"
+      content="Interactive mobile prototype for Jawher Hamdi's Ooredoo Home and Upgrade / Change Plan UX assessment."
+    />
+    <meta name="theme-color" content="#ed1c24" />
+    <meta property="og:title" content="Ooredoo UX Assessment Prototype" />
+    <meta
+      property="og:description"
+      content="Live mobile web prototype covering Home, Manage Plan, Plan Details, Review, and confirmation states."
+    />
+    <meta property="og:type" content="website" />
+    <title>Ooredoo UX Assessment Prototype | Jawher Hamdi</title>
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
@@ -11,258 +22,115 @@
       <main class="stage" aria-label="Ooredoo mobile app prototype">
         <section class="phone" id="phone">
           <div class="screen active" data-screen="home">
-            <div class="topbar">
-              <div class="status-left">9:41</div>
-              <div class="status-right">
-                <span>Wi-Fi</span>
-                <span class="signal"></span>
-                <span class="battery"></span>
-              </div>
-            </div>
-            <div class="phone-inner">
-              <header class="hero">
-                <strong class="brand">ooredoo</strong>
-                <button class="icon-btn" data-go="none" aria-label="Chat"><span>⌘</span></button>
-                <button class="icon-btn" data-go="none" aria-label="Notifications"><span>🔔</span></button>
-              </header>
-              <h1 class="welcome">Hello, Jawher</h1>
-              <section class="card line-card">
-                <div>
-                  <p class="label">My line</p>
-                  <strong>Shahry Voice</strong>
-                </div>
-                <button class="small-btn" data-go="plans">Manage plan</button>
-              </section>
-              <section class="card badge-card">
-                <span>You are a Nojoom <strong>RED</strong> member</span>
-              </section>
-              <section class="card usage-card">
-                <div class="usage-header">
-                  <strong>My usage</strong>
-                  <button class="text-btn" data-go="none">Updated just now</button>
-                </div>
-                <div class="usage-grid">
-                  <article class="usage-item">
-                    <span class="usage-label">Local Data</span>
-                    <strong>20.09 GB</strong>
-                    <span>of 25 GB left</span>
-                  </article>
-                  <article class="usage-item">
-                    <span class="usage-label">Local minutes & SMS</span>
-                    <strong>355 Units</strong>
-                    <span>of 500 left</span>
-                  </article>
-                  <article class="usage-item">
-                    <span class="usage-label">International Minutes</span>
-                    <strong>120 min</strong>
-                    <span>of 200 left</span>
-                  </article>
-                </div>
-                <button class="large-link" data-go="plans">View all usage</button>
-              </section>
-              <section class="card info-card">
-                <div>
-                  <p class="label">My Bill</p>
-                  <strong>QR 138.0</strong>
-                  <span>Total for all accounts</span>
-                </div>
-                <button class="outline-btn" data-go="none">View & pay bill</button>
-              </section>
-              <section class="card info-card">
-                <div>
-                  <p class="label">My Plan</p>
-                  <strong>Shahry Voice</strong>
-                </div>
-                <button class="outline-btn" data-go="plans">Manage plan</button>
-              </section>
-            </div>
-            <nav class="home-nav">
-              <button class="nav-item active" data-go="home">Home</button>
-              <button class="nav-item" data-go="services">Services</button>
-              <button class="nav-item cta" data-go="plans">🎁</button>
-              <button class="nav-item" data-go="help">Help</button>
-              <button class="nav-item" data-go="more">More</button>
-            </nav>
+            <img class="screen-img" src="./assets/01 Home - overview polished-1.png" alt="Ooredoo home overview" />
+            <div class="home-native-nav-cover" aria-hidden="true"></div>
+            <button class="hotspot home-manage" data-go="plans" aria-label="Open Manage Plan"></button>
+            <button class="hotspot home-more-plan" data-go="plans" aria-label="Open My Plan from quick links"></button>
           </div>
 
           <div class="screen" data-screen="plans">
-            <div class="plan-topbar">
-              <button class="icon-btn" data-go="home">←</button>
-              <h2>Manage Plan</h2>
-              <button class="icon-btn" data-go="none">?</button>
-            </div>
-            <div class="screen-content">
-              <section class="card summary-card">
-                <div>
-                  <p class="label">My Current plan</p>
-                  <strong>Shahry+ Go</strong>
-                </div>
-                <div class="price">QR 140/<span>Month</span></div>
-              </section>
-              <div class="tabs">
-                <button class="tab active" data-tab="individual">Individual Plans</button>
-                <button class="tab" data-tab="family">Family Plans</button>
-              </div>
-              <article class="plan-card selected" data-plan="pro">
-                <div class="badge">Recommended</div>
-                <div class="plan-head">
-                  <strong>Shahry+ Family Pro</strong>
-                  <span>QR 500/month</span>
-                </div>
-                <div class="plan-specs">
-                  <span>30 GB Data</span>
-                  <span>Unlimited Calls</span>
-                  <span>Unlimited WhatsApp</span>
-                  <span>2 MORE Benefits</span>
-                </div>
-                <button class="card-btn" data-go="detail">View More details</button>
-              </article>
-              <article class="plan-card" data-plan="family">
-                <div class="plan-head">
-                  <strong>Shahry+ Family</strong>
-                  <span>QR 350/month</span>
-                </div>
-                <div class="plan-specs">
-                  <span>20 GB data</span>
-                  <span>Unlimited calls</span>
-                  <span>WhatsApp</span>
-                </div>
-                <button class="card-btn" data-go="detail-family">View details</button>
-              </article>
-              <article class="plan-card" data-plan="lite">
-                <div class="plan-head">
-                  <strong>Shahry+ Family Lite</strong>
-                  <span>QR 250/month</span>
-                </div>
-                <div class="plan-specs">
-                  <span>15 GB data</span>
-                  <span>Unlimited calls</span>
-                  <span>WhatsApp</span>
-                </div>
-                <button class="card-btn" data-go="detail-lite">View details</button>
-              </article>
-            </div>
+            <img class="screen-img" src="./assets/02 Manage Plan - polished list.png" alt="Manage Plan list" />
+            <button class="hotspot back-top" data-go="home" aria-label="Back to home"></button>
+            <button class="hotspot help-top" data-modal="failure" aria-label="Plan support"></button>
+            <button class="hotspot plan-pro-details" data-go="detail" aria-label="View Shahry Family Pro details"></button>
+            <button class="hotspot plan-pro-arrow" data-go="detail" aria-label="Open Shahry Family Pro details"></button>
+            <button class="hotspot plan-family-details" data-go="detail-family" aria-label="View Shahry Family details"></button>
+            <button class="hotspot plan-family-arrow" data-go="detail-family" aria-label="Open Shahry Family details"></button>
+            <button class="hotspot plan-lite-details" data-go="detail-lite" aria-label="View Shahry Family Lite details"></button>
+            <button class="hotspot plan-lite-arrow" data-go="detail-lite" aria-label="Open Shahry Family Lite details"></button>
+            <button class="hotspot plan-primary" data-go="detail" aria-label="Proceed with selected plan"></button>
           </div>
 
-          <div class="screen" data-screen="detail">
-            <div class="plan-topbar">
-              <button class="icon-btn" data-go="plans">←</button>
-              <h2>Shahry+ Family Pro</h2>
-              <button class="icon-btn" data-go="none">?</button>
+          <div class="screen detail-screen" data-screen="detail">
+            <img class="screen-img" src="./assets/03 Manage Plan - polished list.png" alt="Shahry Family Pro plan details" />
+            <button class="hotspot back-top" data-go="plans" aria-label="Back to plan list"></button>
+            <div class="benefit-layer" aria-label="Entertainment benefits. Choose two.">
+              <span class="benefit-title">ENTERTAINMENT BENEFITS</span>
+              <span class="benefit-subtitle">please Choose 2</span>
+              <button class="benefit" data-benefit="Starz" style="--x: 8px; --bg: #07343b; --fg: #fff;">Starz</button>
+              <button class="benefit" data-benefit="Sony" style="--x: 54px; --bg: #000; --fg: #fff;">Sony</button>
+              <button class="benefit" data-benefit="Play" style="--x: 102px; --bg: #ffbd20; --fg: #151a24;">Play</button>
+              <button class="benefit" data-benefit="Ana" style="--x: 150px; --bg: #000; --fg: #fff;">Ana</button>
+              <button class="benefit" data-benefit="Shahid" style="--x: 197px; --bg: #1fc9aa; --fg: #fff;">Shahid</button>
+              <button class="benefit" data-benefit="OSN" style="--x: 245px; --bg: #000; --fg: #fff;">OSN</button>
+              <button class="benefit" data-benefit="TOD" style="--x: 293px; --bg: #252b35; --fg: #fff;">TOD</button>
             </div>
-            <div class="screen-content detail-screen-content">
-              <section class="card summary-card">
-                <div>
-                  <p class="label">Current plan</p>
-                  <strong>Shahry+ Go</strong>
-                </div>
-                <div class="price highlight">+ QR 360/month</div>
-              </section>
-              <section class="card benefits-card">
-                <div class="benefit-header">
-                  <strong>ENTERTAINMENT BENEFITS</strong>
-                  <span>please Choose 2</span>
-                </div>
-                <div class="benefit-grid">
-                  <button class="benefit-item" data-benefit="Starz">Starz</button>
-                  <button class="benefit-item" data-benefit="Sony">Sony</button>
-                  <button class="benefit-item" data-benefit="Play">Play</button>
-                  <button class="benefit-item" data-benefit="Ana">Ana</button>
-                  <button class="benefit-item" data-benefit="Shahid">Shahid</button>
-                  <button class="benefit-item" data-benefit="OSN">OSN</button>
-                  <button class="benefit-item" data-benefit="TOD">TOD</button>
-                </div>
-              </section>
-              <button class="app-cta" data-go="review">Review plan change <span>→</span></button>
-            </div>
+            <div class="toast" role="status" aria-live="polite"></div>
+            <button class="app-cta detail-cta" type="button" data-go="review" aria-label="Review plan change">
+              <span>Review plan change</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <div class="screen" data-screen="detail-family">
-            <div class="plan-topbar">
-              <button class="icon-btn" data-go="plans">←</button>
-              <h2>Shahry+ Family</h2>
-              <button class="icon-btn" data-go="none">?</button>
+          <div class="screen detail-screen" data-screen="detail-family">
+            <img class="screen-img" src="./assets/03 Manage Plan - polished list.png" alt="Assumed Shahry Family plan details" />
+            <button class="hotspot back-top" data-go="plans" aria-label="Back to plan list"></button>
+            <div class="assumed-plan-note plan-family-note">
+              <strong>Shahry+ Family</strong>
+              <span>QR 350/month · 2 main lines · 20 GB shared data</span>
             </div>
-            <div class="screen-content detail-screen-content">
-              <section class="card summary-card">
-                <div>
-                  <p class="label">Assumed Shahry Family plan details</p>
-                  <strong>Shahry+ Family</strong>
-                  <span>QR 350/month · 2 main lines · 20 GB shared data</span>
-                </div>
-              </section>
-              <button class="app-cta" data-go="review">Review plan change <span>→</span></button>
-            </div>
+            <button class="app-cta detail-cta" type="button" data-go="review" aria-label="Review Shahry Family plan change">
+              <span>Review plan change</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <div class="screen" data-screen="detail-lite">
-            <div class="plan-topbar">
-              <button class="icon-btn" data-go="plans">←</button>
-              <h2>Shahry+ Family Lite</h2>
-              <button class="icon-btn" data-go="none">?</button>
+          <div class="screen detail-screen" data-screen="detail-lite">
+            <img class="screen-img" src="./assets/03 Manage Plan - polished list.png" alt="Assumed Shahry Family Lite plan details" />
+            <button class="hotspot back-top" data-go="plans" aria-label="Back to plan list"></button>
+            <div class="assumed-plan-note plan-lite-note">
+              <strong>Shahry+ Family Lite</strong>
+              <span>QR 250/month · 2 lines · 15 GB data + WhatsApp</span>
             </div>
-            <div class="screen-content detail-screen-content">
-              <section class="card summary-card">
-                <div>
-                  <p class="label">Assumed Shahry Family Lite plan details</p>
-                  <strong>Shahry+ Family Lite</strong>
-                  <span>QR 250/month · 2 lines · 15 GB data + WhatsApp</span>
-                </div>
-              </section>
-              <button class="app-cta" data-go="review">Review plan change <span>→</span></button>
-            </div>
+            <button class="app-cta detail-cta" type="button" data-go="review" aria-label="Review Shahry Family Lite plan change">
+              <span>Review plan change</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <div class="screen" data-screen="review">
-            <div class="plan-topbar">
-              <button class="icon-btn" data-go="detail">←</button>
-              <h2>Review plan change</h2>
-              <button class="icon-btn" data-go="none">?</button>
-            </div>
-            <div class="screen-content detail-screen-content">
-              <section class="card summary-card">
-                <div class="summary-row"><span>Current plan</span><strong>Shahry+ Go</strong></div>
-                <div class="summary-row"><span>New plan</span><strong>Shahry+ Family Pro</strong></div>
-                <div class="summary-row"><span>Current monthly fee</span><strong>QR 140</strong></div>
-                <div class="summary-row"><span>New monthly fee</span><strong>QR 500</strong></div>
-                <div class="summary-row"><span>Monthly difference</span><strong class="highlight">+ QR 360</strong></div>
-                <div class="summary-row"><span>Effective date</span><strong>Next billing cycle</strong></div>
-                <div class="summary-row"><span>Eligibility</span><strong class="green">Eligible</strong></div>
-              </section>
-              <div class="card details-card">
-                <strong>What you'll get</strong>
-                <ul>
-                  <li>30 GB Data in Qatar</li>
-                  <li>Unlimited Local Calls & SMS</li>
-                  <li>Unlimited WhatsApp Data</li>
-                  <li>Unlimited social media data</li>
-                  <li>Unlimited calls between family lines</li>
-                  <li>Up to 700 International Calls & SMS</li>
-                  <li>1 secondary line of your choice</li>
-                  <li>2 entertainment benefits</li>
-                </ul>
-              </div>
-              <button class="app-cta confirm-cta" data-modal="success">Confirm plan change <span>→</span></button>
-            </div>
+          <div class="screen review-screen" data-screen="review">
+            <img class="screen-img" src="./assets/03 Manage Plan - polished list-1.png" alt="Review plan change" />
+            <button class="hotspot back-top" data-go="detail" aria-label="Back to plan details"></button>
+            <div class="review-plan-note" data-review-note hidden></div>
+            <button class="hotspot review-help" data-modal="failure" aria-label="Need help"></button>
+            <button class="app-cta review-cta" type="button" data-modal="success" aria-label="Confirm plan change">
+              <span>Confirm plan change</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
           </div>
 
           <div class="modal-screen" data-modal-screen="success" aria-hidden="true">
-            <div class="modal-card">
-              <div class="modal-icon success">✓</div>
-              <h3>Plan change confirmed</h3>
-              <p>Your new plan will start on the next billing cycle. A confirmation SMS will be sent shortly.</p>
-              <button class="app-cta refresh-btn" data-refresh>Done</button>
-            </div>
+            <img class="screen-img" src="./assets/07 Success modal overlay.png" alt="Plan change confirmed" />
+            <button class="hotspot modal-done success-done" data-go="home" aria-label="Done"></button>
+            <button class="refresh-after-success" type="button" data-refresh hidden>Refresh prototype</button>
           </div>
 
           <div class="modal-screen" data-modal-screen="failure" aria-hidden="true">
-            <div class="modal-card">
-              <div class="modal-icon failure">✕</div>
-              <h3>Plan change unavailable</h3>
-              <p>Your current plan remains unchanged. Try again later or contact support for help.</p>
-              <button class="app-cta refresh-btn" data-close>Done</button>
-              <button class="outline-btn" data-close>Contact support</button>
-            </div>
+            <img class="screen-img" src="./assets/08 Failure support overlay.png" alt="Plan change unavailable support state" />
+            <button class="hotspot modal-done failure-done" data-close aria-label="Done"></button>
+            <button class="hotspot modal-support" data-close aria-label="Contact support"></button>
+          </div>
+
+          <div class="fixed-mobile-nav" data-fixed-nav aria-hidden="true">
+            <button class="nav-item active" type="button" data-go="home" aria-label="Home">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.8 12 3.5l9 7.3"/><path d="M5.2 9.7v10.1h4.9v-5.7h3.8v5.7h4.9V9.7"/></svg>
+              <small>Home</small>
+            </button>
+            <button class="nav-item" type="button" data-modal="failure" aria-label="Services">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5h14v11H5z"/><path d="M8 7.5V5.8A1.8 1.8 0 0 1 9.8 4h4.4A1.8 1.8 0 0 1 16 5.8v1.7"/><path d="M5 11.5h14"/><path d="M9.5 14h5"/></svg>
+              <small>Services</small>
+            </button>
+            <button class="nav-gift" type="button" data-modal="success" aria-label="Nojoom rewards">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10h15v10h-15z"/><path d="M3.5 6.5h17v3.5h-17z"/><path d="M12 6.5V20"/><path d="M12 6.5H8.9A2.15 2.15 0 1 1 10.4 2.8C11.7 4 12 6.5 12 6.5Z"/><path d="M12 6.5h3.1a2.15 2.15 0 1 0-1.5-3.7C12.3 4 12 6.5 12 6.5Z"/></svg>
+            </button>
+            <button class="nav-item" type="button" data-modal="failure" aria-label="Help">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.4 9.3a2.65 2.65 0 1 1 4.85 1.48c-.85 1.06-2.2 1.32-2.2 3.17"/><path d="M12 17.7h.01"/></svg>
+              <small>Help</small>
+            </button>
+            <button class="nav-item" type="button" data-modal="failure" aria-label="More">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4.1 4.1 0 1 0 0-8.2 4.1 4.1 0 0 0 0 8.2Z"/><path d="M4.8 20.2a7.2 7.2 0 0 1 14.4 0"/></svg>
+              <small>More</small>
+            </button>
           </div>
         </section>
 
